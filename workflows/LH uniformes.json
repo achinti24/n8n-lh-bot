@@ -1,0 +1,4579 @@
+{
+  "name": "LH uniformes",
+  "nodes": [
+    {
+      "parameters": {
+        "updates": [
+          "messages"
+        ],
+        "options": {}
+      },
+      "type": "n8n-nodes-base.whatsAppTrigger",
+      "typeVersion": 1,
+      "position": [
+        -624,
+        -96
+      ],
+      "id": "eab99911-7ba8-490f-aec2-fe8e1d410f12",
+      "name": "WhatsApp Trigger",
+      "webhookId": "dd966364-fc36-4669-9922-98d06f9a8aee",
+      "credentials": {
+        "whatsAppTriggerApi": {
+          "id": "RVIGXyi4fyVqXyHc",
+          "name": "WhatsApp OAuth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "menu",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "6aef0ab5-c1b7-4a9b-a960-61a4b043d584"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7d38f407-9302-43e4-8c6b-17c99b303231",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "mostrar_catalogo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a6527f8d-f255-450a-bb39-b8a9ae35700e",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "catalogo_opcion",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6bbd78a5-c3c1-4f1d-9038-3b823a99daf4",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "mostrar_precios",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "9c85b858-ed7d-460c-aabe-e919a7f78392",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_nombre",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "a63f272c-e4c3-4632-a93e-a981798a9d6f",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_nombre_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "07447f44-9adc-4210-b9c0-42f50ad5cf3f",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_celular",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "25f6dedd-1d0d-4a83-9361-ce8f3c867da4",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_celular_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "434f0f2a-2655-4264-abf3-34f9701a8b84",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_categoria",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "09da5c95-cc1d-4a3c-9ab9-ed0a82ab288e",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_codigo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5a342f1c-04db-449d-96eb-ea236d2462e5",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_genero",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e8858269-23c3-4c12-afba-72a7fed3dceb",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_genero_simple",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "f43caa31-782a-48b1-9968-16db4aa3807b",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_tela_dama",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "97f8c310-ae4b-4c48-ae2b-bc75bad65234",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_tela_caballero",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ac40d70e-41cb-4152-84d2-63b1d32380fa",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_camuflado",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ffc6062a-15c2-421d-afa5-5bace8fedd4f",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_talla",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ebd6b56b-4634-4b03-8daf-c8aa8052f558",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_talla_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6478e261-218e-4927-9e0b-d8720d704592",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_talla_no_disponible",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "3c89fb58-9b0c-4c98-be7f-e81a8ff5cf37",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_filipina_genero",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ad8a0d11-0f19-47d0-9450-7a52b8bd993c",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_filipina_tipo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1e2e7777-6f61-4022-a642-5091d51e64b4",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_bata_tipo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "901e0208-9b7b-4df9-9b69-8dd517c8877f",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_polo_talla",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "22fcee44-7efa-4e78-8b68-677402e5abdd",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_polo_talla_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "3aefb77e-b304-4321-ab5e-76b89b1b77ba",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_color",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "522d7a4d-7ad5-41ec-a7fc-32395f6292f8",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_bordado",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7cd19fb1-a3bd-4b50-a067-875e5561d832",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_bordado_tipo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7bd80d66-2d4b-4fbf-b146-534c697eddbd",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_bordado_logo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7ba02fc0-6267-44ef-99c0-e4af30e1c2da",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_bordado_logo_despues_nombre",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "01d4748f-3639-4bbe-b69f-4d1261278c9b",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_bordado_nombre_texto",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "49008bcf-df15-49d5-81bf-c93581f3b3da",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_cantidad_item",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "93710636-eff7-4905-b5d7-8d998c051272",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_cantidad_item_error",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "ea77cc24-7168-4ef5-893c-cf2f38ab0929",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_otro_producto",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "36981bb0-bfb5-4c7b-a793-d9df1442100a",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_confirmar",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e79993e0-9922-447c-abee-fefe3d4fb0b7",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_cancelado",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "05348560-66a3-4111-b15d-26f8cea0dd47",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "pedido_listo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5c1dd9fe-c4d8-497b-afd6-5a815daeb1d6",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "no_entendido",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "56da5d57-aac0-4a8e-b54d-92f4492bff08",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "mostrar_asesor",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "2f4399b4-67f0-4fb6-8d25-c6451dd04471",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "asesor",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "84ce8459-5fb4-4afe-b3c4-0cb4ea94bd5d",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "bordado_tipo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1f506cb9-0848-4cc1-87b4-b5d1ac0ed1ac",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "bordado_nuevo",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "24958723-f63f-4663-9803-1bb6ca851c97",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "bordado_propio",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b2ccdb4c-514a-407d-9a5c-93f68a6cfbe5",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "bordado_propio_texto",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "778b76c0-7ae1-488d-b907-243b466c5513",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "no_entendido",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "d18eea02-6534-424c-a041-b59d01588a9a",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "buscar_en_sheets",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "607f67d0-d002-4503-835a-d8ced38d11f8",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "tallas_genero",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "b3dc2bf9-3698-47c8-89e5-0a8409d31c09",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "tallas_caballero",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5d7a267b-57ba-44f3-82e7-876351efe363",
+                    "leftValue": "={{ $json.estado }}",
+                    "rightValue": "tallas_dama",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "none",
+          "ignoreCase": false,
+          "allMatchingOutputs": false
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        352,
+        -96
+      ],
+      "id": "b50a3fbf-00bf-41d9-b20a-9ba58d579dd7",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f1e0bf2e-12ec-4ed0-a1ba-dfde33d93959"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e7080e57-dbcb-4fc4-9727-583db23bf5dd",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "821652a0-9f1b-425d-92f9-79eaf40eec8c",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1e9340e9-64a4-4e89-9921-5baf5edafa38",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "4",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7fb351a7-9c04-498e-b69a-02f021a95bc4",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "5",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6c4b9c84-c726-4ed4-8d42-4dd77282345b",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "6",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "15b2cdb3-0c0d-4d7d-a0af-42f8b9cf7386",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "7",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "dc5095a4-187f-4c6b-b126-f730992abf94",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "8",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "906939ed-c1be-4a82-bc08-e844df326460",
+                    "leftValue": "={{ $json.subopcion }}",
+                    "rightValue": "0",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        2032,
+        -2368
+      ],
+      "id": "591d190b-bc93-4c2e-9af4-c99cdc15ba8e",
+      "name": "Switch1"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/tJ5ypFz.png",
+        "additionalFields": {
+          "mediaCaption": "👖 *SOLO PANTALÓN*\n\nDisponible para dama y caballero.\nTallas dama: T16 hasta XXXL\nTallas caballero: T16 hasta XXXL\n\n📌 Para ver los códigos y fotos de cada estilo visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n💰 Ver precios → escribe *menu* y elige opción 2️⃣\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2800,
+        -2384
+      ],
+      "id": "c07c24dd-5ddf-4154-8265-ff41b10454e8",
+      "name": "Send message8",
+      "webhookId": "e177f0e5-757d-421e-9fea-be0ef66170b4",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/1Q6Y56j.png",
+        "additionalFields": {
+          "mediaCaption": "🥼 *FILIPINAS*\n\nDisponible para dama y caballero en 4 estilos:\n- Básica\n- Cruzada\n- Manga 3/4\n- Manga Larga\n\nTallas dama: T16 hasta XXL\nTallas caballero: S hasta XXL\n\n📌 Para ver los códigos y fotos de cada estilo visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n💰 Ver precios → escribe *menu* y elige opción 2️⃣\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3072,
+        -2320
+      ],
+      "id": "9dd104d1-dca8-4016-907d-242357fe60ab",
+      "name": "Send message9",
+      "webhookId": "480c74cd-f3f5-4b8e-b927-39be92edf5cd",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/N3astfk.png",
+        "additionalFields": {
+          "mediaCaption": "🧥 *BATAS*\n\nDisponible en los siguientes tipos:\n- Enfermería Unisangil (dama y caballero)\n- Psicología UDI (dama y caballero)\n- Dril\n- Antifluido Económico\n- Dacrón Manga Corta\n- Dacrón Manga Larga\n\n📌 Para ver los códigos y fotos de cada estilo visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n💰 Ver precios → escribe *menu* y elige opción 2️⃣\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3296,
+        -2272
+      ],
+      "id": "edf9b62f-886d-4ce5-95e8-0f5483f2781f",
+      "name": "Send message10",
+      "webhookId": "abe86e0b-f0c5-46cf-a98d-6a9c0cc950ff",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/D9AOGKY.png",
+        "additionalFields": {
+          "mediaCaption": "👕 *POLOS*\n\nDisponible para dama y caballero.\nTallas: XS · S · M · L\n✅ Incluye bordado en el precio\n\n📌 Para ver los códigos y fotos de cada estilo visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n💰 Ver precios → escribe *menu* y elige opción 2️⃣\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3088,
+        -2112
+      ],
+      "id": "d1ecaea0-49c3-44e2-b2da-adca94531e5d",
+      "name": "Send message12",
+      "webhookId": "64578d2b-277d-40f6-817a-e3ffeb3057b4",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "volviendo",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2368,
+        -1760
+      ],
+      "id": "706837b6-c697-407f-a01d-29b394ae118a",
+      "name": "Send message13",
+      "webhookId": "a4b18b75-df2c-4972-a3a5-abf35447d95f",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "// ============================================================\n// LH UNIFORMES - CÓDIGO COMPLETO v6\n// Catálogo: mostrar_catalogo = primera vez, catalogo_opcion = submenú\n// ============================================================\n\nconst WorkflowStaticData = $getWorkflowStaticData('global');\nconst msg = $json.messages?.[0]?.text?.body?.trim() || \"\";\nconst msgLower = msg.toLowerCase().trim();\nconst telefono = $json.messages?.[0]?.from || \"\";\n\nif (!msg || !telefono) return [];\n\nconst estadoActual = WorkflowStaticData[telefono] || \"menu\";\nlet pedido = WorkflowStaticData[\"pedido_\" + telefono] || {};\n\n// ============================================================\n// PRECIOS\n// ============================================================\nconst PRECIOS = {\n  dama: {\n    economico: {\n      sencillo:  { \"16\":110000,\"XS\":115000,\"S\":115000,\"M\":120000,\"L\":120000,\"XL\":130000,\"XXL\":130000,\"XXXL\":150000 },\n      camuflado: { \"16\":130000,\"XS\":135000,\"S\":135000,\"M\":140000,\"L\":140000,\"XL\":150000,\"XXL\":150000,\"XXXL\":170000 }\n    },\n    lafayette: {\n      sencillo:  { \"16\":142000,\"XS\":142000,\"S\":142000,\"M\":147000,\"L\":155000,\"XL\":163000,\"XXL\":169000,\"XXXL\":183000 },\n      camuflado: { \"16\":162000,\"XS\":162000,\"S\":162000,\"M\":167000,\"L\":175000,\"XL\":183000,\"XXL\":189000,\"XXXL\":203000 }\n    },\n    lotus:            { sencillo: { \"16\":208000,\"XS\":215000,\"S\":215000,\"M\":220000,\"L\":230000,\"XL\":238000,\"XXL\":244000,\"XXXL\":250000 } },\n    microtec:         { sencillo: { \"16\":170000,\"XS\":170000,\"S\":170000,\"M\":178000,\"L\":185000,\"XL\":195000 } },\n    unisangil:        { sencillo: { \"16\":142000,\"XS\":142000,\"S\":142000,\"M\":147000,\"L\":155000,\"XL\":163000,\"XXL\":169000,\"XXXL\":183000 } },\n    psicologia_libre: { sencillo: { \"16\":147000,\"XS\":147000,\"S\":147000,\"M\":152000,\"L\":160000,\"XL\":168000,\"XXL\":174000,\"XXXL\":188000 } }\n  },\n  caballero: {\n    lafayette: {\n      sencillo:  { \"S\":158000,\"M\":166000,\"L\":176000,\"XL\":187000,\"XXL\":197000,\"XXXL\":205000 },\n      camuflado: { \"S\":174000,\"M\":182000,\"L\":192000,\"XL\":203000,\"XXL\":213000,\"XXXL\":221000 }\n    },\n    lotus:            { sencillo: { \"S\":238000,\"M\":245000,\"L\":250000,\"XL\":260000,\"XXL\":268000,\"XXXL\":274000 } },\n    unisangil:        { sencillo: { \"S\":158000,\"M\":166000,\"L\":176000,\"XL\":187000,\"XXL\":197000,\"XXXL\":205000 } },\n    psicologia_libre: { sencillo: { \"S\":163000,\"M\":171000,\"L\":181000,\"XL\":192000,\"XXL\":202000,\"XXXL\":210000 } }\n  },\n  solo_blusa: {\n    dama:      { \"16\":87000,\"XS\":87000,\"S\":87000,\"M\":90000,\"L\":94000,\"XL\":96000,\"XXL\":99000,\"XXXL\":103000 },\n    caballero: { \"16\":93000,\"XS\":93000,\"S\":93000,\"M\":96000,\"L\":103000,\"XL\":106000,\"XXL\":110000,\"XXXL\":114000 }\n  },\n  solo_pantalon: {\n    dama:      { \"16\":75000,\"XS\":75000,\"S\":75000,\"M\":77000,\"L\":81000,\"XL\":84000,\"XXL\":87000,\"XXXL\":94000 },\n    caballero: { \"16\":83000,\"XS\":83000,\"S\":83000,\"M\":88000,\"L\":93000,\"XL\":97000,\"XXL\":103000,\"XXXL\":107000 }\n  },\n  filipina_dama: {\n    basica:      { \"16\":87000,\"XS\":87000,\"S\":87000,\"M\":90000,\"L\":94000,\"XL\":96000,\"XXL\":99000 },\n    cruzada:     { \"16\":99000,\"XS\":99000,\"S\":99000,\"M\":102000,\"L\":106000,\"XL\":108000,\"XXL\":111000 },\n    manga_34:    { \"16\":120000,\"XS\":120000,\"S\":120000,\"M\":128000,\"L\":128000,\"XL\":134000 },\n    manga_larga: { \"16\":120000,\"XS\":120000,\"S\":120000,\"M\":128000,\"L\":128000,\"XL\":134000 }\n  },\n  filipina_caballero: {\n    basica:      { \"S\":93000,\"M\":96000,\"L\":103000,\"XL\":106000,\"XXL\":110000 },\n    cruzada:     { \"S\":105000,\"M\":108000,\"L\":115000,\"XL\":118000,\"XXL\":122000 },\n    manga_34:    { \"S\":128000,\"M\":134000,\"L\":140000,\"XL\":145000 },\n    manga_larga: { \"S\":128000,\"M\":134000,\"L\":140000,\"XL\":145000 }\n  },\n  batas: {\n    dama_unisangil:       { \"16\":120000,\"XS\":120000,\"S\":120000 },\n    caballero_unisangil:  { \"S\":128000,\"M\":128000,\"L\":128000 },\n    dama_psicologia:      { \"16\":126000,\"XS\":126000,\"S\":126000 },\n    caballero_psicologia: { \"S\":134000,\"M\":134000,\"L\":134000 },\n    dril:                 { \"16\":80000,\"XS\":80000,\"S\":80000,\"M\":80000 },\n    antifluido_economico: { \"16\":80000,\"XS\":80000,\"S\":80000,\"M\":80000 },\n    dacron_manga_corta:   { \"16\":45000,\"S\":45000,\"M\":48000,\"L\":48000 },\n    dacron_manga_larga:   { \"16\":55000,\"S\":55000,\"M\":60000,\"L\":60000 }\n  },\n  gorros:    { antifluido_rigido: 25000 },\n  delantales:{ antifluido_rigido: 35000 },\n  polos:     { dama_caballero: 58000 }\n};\n\n// ============================================================\n// UTILIDADES\n// ============================================================\nfunction formatPrecio(v) { return \"$\" + Math.round(v/1000) + \".000\"; }\n\nfunction getPrecio(categoria, subtipo, genero, talla) {\n  try {\n    if (categoria === \"uniforme\")           return PRECIOS[genero][subtipo].sencillo[talla] || null;\n    if (categoria === \"uniforme_camuflado\") return PRECIOS[genero][subtipo].camuflado[talla] || null;\n    if (categoria === \"solo_blusa\")         return PRECIOS.solo_blusa[genero][talla] || null;\n    if (categoria === \"solo_pantalon\")      return PRECIOS.solo_pantalon[genero][talla] || null;\n    if (categoria === \"filipina_dama\")      return PRECIOS.filipina_dama[subtipo][talla] || null;\n    if (categoria === \"filipina_caballero\") return PRECIOS.filipina_caballero[subtipo][talla] || null;\n    if (categoria === \"bata\")               return PRECIOS.batas[subtipo][talla] || null;\n    if (categoria === \"gorro\")              return PRECIOS.gorros.antifluido_rigido;\n    if (categoria === \"delantal\")           return PRECIOS.delantales.antifluido_rigido;\n    if (categoria === \"polo\")               return PRECIOS.polos.dama_caballero;\n  } catch(e) {}\n  return null;\n}\n\nfunction resumenItem(item) {\n  var l = [];\n  l.push(\"📦 *Producto \" + item.numero + \":*\");\n  l.push(\"• Categoría: \" + item.categoriaLabel);\n  if (item.codigo)        l.push(\"• Código: \" + item.codigo);\n  if (item.subtipoLabel)  l.push(\"• Tipo: \" + item.subtipoLabel);\n  if (item.genero)        l.push(\"• Género: \" + item.genero);\n  if (item.talla)         l.push(\"• Talla: \" + item.talla);\n  if (item.color)         l.push(\"• Color: \" + item.color);\n  if (item.camuflado !== undefined) l.push(\"• Pantalón camuflado: \" + (item.camuflado ? \"Sí\" : \"No\"));\n  if (item.bordadoLabel)  l.push(\"• Bordado: \" + item.bordadoLabel);\n  if (item.bordadoNombre) l.push(\"• Nombre a bordar: \" + item.bordadoNombre);\n  if (item.cantidad)      l.push(\"• Cantidad: \" + item.cantidad);\n  if (item.precio)        l.push(\"• Precio unitario: \" + formatPrecio(item.precio));\n  if (item.subtotal)      l.push(\"• Subtotal: \" + formatPrecio(item.subtotal));\n  return l.join(\"\\n\");\n}\n\nfunction resumenCompleto(p) {\n  var t = \"🧾 *RESUMEN DE PEDIDO - LH UNIFORMES*\\n\";\n  t += \"━━━━━━━━━━━━━━━━━━━━━\\n\";\n  t += \"👤 *Cliente:* \" + p.nombre + \"\\n\";\n  t += \"📱 *Celular:* \" + p.celular + \"\\n\";\n  t += \"━━━━━━━━━━━━━━━━━━━━━\\n\";\n  (p.items || []).forEach(function(item) {\n    t += resumenItem(item) + \"\\n\";\n    t += \"━━━━━━━━━━━━━━━━━━━━━\\n\";\n  });\n  t += \"💰 *TOTAL: \" + formatPrecio(p.valorTotal) + \"*\\n\";\n  t += \"💵 *Anticipo mínimo (50%): \" + formatPrecio(p.anticipo) + \"*\\n\";\n  t += \"📅 *Fecha:* \" + new Date().toLocaleDateString('es-CO') + \"\\n\";\n  return t;\n}\n\nfunction guardar() { WorkflowStaticData[\"pedido_\" + telefono] = pedido; }\nfunction resetear() { WorkflowStaticData[telefono] = \"menu\"; delete WorkflowStaticData[\"pedido_\" + telefono]; }\nfunction ir(estado) { WorkflowStaticData[telefono] = estado; }\nfunction salida(estado, extra) {\n  var base = { mensaje: msg, telefono: telefono, estado: estado, pedido: pedido, indice: pedido.indice || 1 };\n  if (extra) Object.keys(extra).forEach(function(k) { base[k] = extra[k]; });\n  return [{ json: base }];\n}\n\n// ============================================================\n// RESET GLOBAL\n// ============================================================\nif (msgLower === \"menu\" || msgLower === \"0\") {\n  resetear();\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"menu\", indice: 1 } }];\n}\n\n// ============================================================\n// SALUDOS\n// ============================================================\nconst saludos = [\"hola\",\"buenas\",\"buenos días\",\"buenos dias\",\"buenas tardes\",\"buenas noches\",\"hi\",\"hello\",\"inicio\",\"start\",\"holi\"];\nif (estadoActual === \"menu\" && saludos.some(function(s){ return msgLower.startsWith(s); })) {\n  resetear();\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"menu\", indice: 1 } }];\n}\n\n// ============================================================\n// MENÚ PRINCIPAL\n// ============================================================\nif (estadoActual === \"menu\") {\n  if (msgLower === \"1\") {\n    // Primera vez en catálogo: guarda estado \"catalogo\", manda \"mostrar_catalogo\"\n    ir(\"catalogo\");\n    return [{ json: { mensaje: msg, telefono: telefono, estado: \"mostrar_catalogo\", indice: 1 } }];\n  }\n  if (msgLower === \"2\") { ir(\"precios\");       return [{ json: { mensaje: msg, telefono: telefono, estado: \"mostrar_precios\",  indice: 1 } }]; }\n  if (msgLower === \"3\") { ir(\"tallas_genero\"); return [{ json: { mensaje: msg, telefono: telefono, estado: \"tallas_genero\",    indice: 1 } }]; }\n  if (msgLower === \"5\") {\n    pedido = { items: [], itemActual: {}, indice: 1 };\n    guardar(); ir(\"pedido_nombre\");\n    return [{ json: { mensaje: msg, telefono: telefono, estado: \"pedido_nombre\", pedido: pedido, indice: 1 } }];\n  }\n  if (msgLower === \"6\") { ir(\"bordado_tipo\"); return [{ json: { mensaje: msg, telefono: telefono, estado: \"bordado_tipo\",    indice: 1 } }]; }\n  if (msgLower === \"7\") return [{ json: { mensaje: msg, telefono: telefono, estado: \"buscar_en_sheets\", busqueda: telefono, indice: 1 } }];\n  if (msgLower === \"8\") { ir(\"asesor\");       return [{ json: { mensaje: msg, telefono: telefono, estado: \"mostrar_asesor\", indice: 1 } }]; }\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"menu\", indice: 1 } }];\n}\n\n// ============================================================\n// CATÁLOGO — ya está dentro del catálogo\n// Switch principal: \"catalogo_opcion\" → Switch1 filtra por subopcion\n// Switch principal: \"mostrar_catalogo\" → muestra menú catálogo (solo primera vez)\n// ============================================================\nif (estadoActual === \"catalogo\") {\n  if (msgLower === \"0\") {\n    resetear();\n    return [{ json: { mensaje: msg, telefono: telefono, estado: \"menu\", indice: 1 } }];\n  }\n  if ([\"1\",\"2\",\"3\",\"4\",\"5\",\"6\",\"7\",\"8\",\"9\"].includes(msgLower)) {\n    // Estado sigue \"catalogo\" en memoria\n    // Manda estado DIFERENTE al Switch principal: \"catalogo_opcion\"\n    // Switch1 filtra por subopcion\n    return [{ json: { mensaje: msg, telefono: telefono, estado: \"catalogo_opcion\", subopcion: msgLower, indice: 1 } }];\n  }\n  // Cualquier otra cosa → repetir menú catálogo\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"mostrar_catalogo\", indice: 1 } }];\n}\n\n// ============================================================\n// PRECIOS\n// ============================================================\nif (estadoActual === \"precios\") {\n  if (msgLower === \"0\") { resetear(); return [{ json: { mensaje: msg, telefono: telefono, estado: \"menu\", indice: 1 } }]; }\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"mostrar_precios\", indice: 1 } }];\n}\n\n// ============================================================\n// TALLAS\n// ============================================================\nif (estadoActual === \"tallas_genero\") {\n  if (msgLower === \"1\") { resetear(); return [{ json: { mensaje: msg, telefono: telefono, estado: \"tallas_dama\",      indice: 1 } }]; }\n  if (msgLower === \"2\") { resetear(); return [{ json: { mensaje: msg, telefono: telefono, estado: \"tallas_caballero\", indice: 1 } }]; }\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"tallas_genero\", indice: 1 } }];\n}\n\n// ============================================================\n// ASESOR Y BORDADOS\n// ============================================================\nif (estadoActual === \"asesor\") {\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"asesor\", indice: 1 } }];\n}\nif (estadoActual === \"bordado_tipo\") {\n  if (msgLower === \"1\") { resetear(); return [{ json: { mensaje: msg, telefono: telefono, estado: \"bordado_nuevo\",  indice: 1 } }]; }\n  if (msgLower === \"2\") { ir(\"bordado_propio_foto\"); return [{ json: { mensaje: msg, telefono: telefono, estado: \"bordado_propio\", indice: 1 } }]; }\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"bordado_tipo\", indice: 1 } }];\n}\nif (estadoActual === \"bordado_propio_foto\") {\n  resetear();\n  return [{ json: { mensaje: msg, telefono: telefono, estado: \"bordado_propio_texto\", indice: 1 } }];\n}\n\n// ============================================================\n// FLUJO DE PEDIDO\n// ============================================================\n\nif (estadoActual === \"pedido_nombre\") {\n  if (msg.length < 2) return salida(\"pedido_nombre_error\");\n  pedido.nombre = msg;\n  guardar(); ir(\"pedido_celular\");\n  return salida(\"pedido_celular\");\n}\n\nif (estadoActual === \"pedido_celular\") {\n  var cel = msg.replace(/[\\s\\-\\(\\)]/g, \"\");\n  if (!/^\\d{7,15}$/.test(cel)) return salida(\"pedido_celular_error\");\n  if (cel.startsWith(\"3\") && cel.length === 10) cel = \"57\" + cel;\n  pedido.celular = cel;\n  guardar(); ir(\"pedido_categoria\");\n  return salida(\"pedido_categoria\");\n}\n\nif (estadoActual === \"pedido_categoria\") {\n  var cats = {\n    \"1\": { key: \"uniforme_completo\", label: \"Uniforme completo (blusa + pantalón)\" },\n    \"2\": { key: \"solo_blusa\",        label: \"Solo blusa\" },\n    \"3\": { key: \"solo_pantalon\",     label: \"Solo pantalón\" },\n    \"4\": { key: \"filipina\",          label: \"Filipina\" },\n    \"5\": { key: \"bata\",              label: \"Bata\" },\n    \"6\": { key: \"polo\",              label: \"Polo\" },\n    \"7\": { key: \"gorro\",             label: \"Gorro\" },\n    \"8\": { key: \"delantal\",          label: \"Delantal\" }\n  };\n  if (!cats[msgLower]) return salida(\"pedido_categoria\");\n  var indiceActual = pedido.indice || 1;\n  pedido.itemActual = { numero: indiceActual, categoria: cats[msgLower].key, categoriaLabel: cats[msgLower].label };\n  guardar();\n  if (cats[msgLower].key === \"uniforme_completo\") { ir(\"pedido_codigo\");           return salida(\"pedido_codigo\"); }\n  if (cats[msgLower].key === \"solo_blusa\" ||\n      cats[msgLower].key === \"solo_pantalon\")      { ir(\"pedido_genero_simple\");   return salida(\"pedido_genero_simple\"); }\n  if (cats[msgLower].key === \"filipina\")           { ir(\"pedido_filipina_genero\"); return salida(\"pedido_filipina_genero\"); }\n  if (cats[msgLower].key === \"bata\")               { ir(\"pedido_bata_tipo\");       return salida(\"pedido_bata_tipo\"); }\n  if (cats[msgLower].key === \"polo\")               { ir(\"pedido_polo_talla\");      return salida(\"pedido_polo_talla\"); }\n  if (cats[msgLower].key === \"gorro\" || cats[msgLower].key === \"delantal\") {\n    pedido.itemActual.subtipoLabel = \"Antifluido Rígido\";\n    pedido.itemActual.precio = cats[msgLower].key === \"gorro\" ? PRECIOS.gorros.antifluido_rigido : PRECIOS.delantales.antifluido_rigido;\n    guardar(); ir(\"pedido_cantidad_item\");\n    return salida(\"pedido_cantidad_item\");\n  }\n  return salida(\"pedido_categoria\");\n}\n\nif (estadoActual === \"pedido_codigo\") {\n  pedido.itemActual.codigo = msg.toUpperCase();\n  guardar(); ir(\"pedido_genero\");\n  return salida(\"pedido_genero\");\n}\n\nif (estadoActual === \"pedido_genero\") {\n  if (msgLower === \"1\" || msgLower === \"dama\")      { pedido.itemActual.genero = \"dama\";      guardar(); ir(\"pedido_tela_dama\");      return salida(\"pedido_tela_dama\"); }\n  if (msgLower === \"2\" || msgLower === \"caballero\") { pedido.itemActual.genero = \"caballero\"; guardar(); ir(\"pedido_tela_caballero\"); return salida(\"pedido_tela_caballero\"); }\n  return salida(\"pedido_genero\");\n}\n\nif (estadoActual === \"pedido_tela_dama\") {\n  var telasDama  = { \"1\":\"economico\",\"2\":\"lafayette\",\"3\":\"lotus\",\"4\":\"microtec\",\"5\":\"unisangil\",\"6\":\"psicologia_libre\" };\n  var labelsDama = { \"1\":\"Económico Licrado\",\"2\":\"Lafayette Rígido\",\"3\":\"Lafayette Lotus\",\"4\":\"Microtec\",\"5\":\"Unisangil (Enfermería)\",\"6\":\"Psicología Libre\" };\n  if (!telasDama[msgLower]) return salida(\"pedido_tela_dama\");\n  pedido.itemActual.subtipo = telasDama[msgLower];\n  pedido.itemActual.subtipoLabel = labelsDama[msgLower];\n  guardar();\n  if (telasDama[msgLower] === \"economico\" || telasDama[msgLower] === \"lafayette\") { ir(\"pedido_camuflado\"); return salida(\"pedido_camuflado\"); }\n  ir(\"pedido_talla\"); return salida(\"pedido_talla\");\n}\n\nif (estadoActual === \"pedido_tela_caballero\") {\n  var telasCab  = { \"1\":\"lafayette\",\"2\":\"lotus\",\"3\":\"unisangil\",\"4\":\"psicologia_libre\" };\n  var labelsCab = { \"1\":\"Lafayette Rígido\",\"2\":\"Lafayette Lotus\",\"3\":\"Unisangil (Enfermería)\",\"4\":\"Psicología Libre\" };\n  if (!telasCab[msgLower]) return salida(\"pedido_tela_caballero\");\n  pedido.itemActual.subtipo = telasCab[msgLower];\n  pedido.itemActual.subtipoLabel = labelsCab[msgLower];\n  guardar();\n  if (telasCab[msgLower] === \"lafayette\") { ir(\"pedido_camuflado\"); return salida(\"pedido_camuflado\"); }\n  ir(\"pedido_talla\"); return salida(\"pedido_talla\");\n}\n\nif (estadoActual === \"pedido_camuflado\") {\n  if (msgLower !== \"si\" && msgLower !== \"sí\" && msgLower !== \"1\" && msgLower !== \"no\" && msgLower !== \"2\") return salida(\"pedido_camuflado\");\n  pedido.itemActual.camuflado = (msgLower === \"si\" || msgLower === \"sí\" || msgLower === \"1\");\n  guardar(); ir(\"pedido_talla\"); return salida(\"pedido_talla\");\n}\n\nif (estadoActual === \"pedido_talla\") {\n  var tallasOk = [\"16\",\"XS\",\"S\",\"M\",\"L\",\"XL\",\"XXL\",\"XXXL\"];\n  var tu = msg.toUpperCase();\n  if (!tallasOk.includes(tu)) return salida(\"pedido_talla_error\");\n  var item = pedido.itemActual;\n  var precio = null;\n  if (item.categoria === \"uniforme_completo\") precio = getPrecio(item.camuflado ? \"uniforme_camuflado\" : \"uniforme\", item.subtipo, item.genero, tu);\n  else if (item.categoria === \"solo_blusa\")    precio = getPrecio(\"solo_blusa\",   null, item.genero, tu);\n  else if (item.categoria === \"solo_pantalon\") precio = getPrecio(\"solo_pantalon\",null, item.genero, tu);\n  else if (item.categoria === \"filipina\")      precio = getPrecio(item.genero === \"dama\" ? \"filipina_dama\" : \"filipina_caballero\", item.subtipo, null, tu);\n  else if (item.categoria === \"bata\")          precio = getPrecio(\"bata\", item.subtipo, null, tu);\n  if (!precio) return salida(\"pedido_talla_no_disponible\", { talla: tu });\n  pedido.itemActual.talla = tu;\n  pedido.itemActual.precio = precio;\n  guardar(); ir(\"pedido_color\"); return salida(\"pedido_color\");\n}\n\nif (estadoActual === \"pedido_genero_simple\") {\n  if (msgLower === \"1\" || msgLower === \"dama\")      { pedido.itemActual.genero = \"dama\";      guardar(); ir(\"pedido_talla\"); return salida(\"pedido_talla\"); }\n  if (msgLower === \"2\" || msgLower === \"caballero\") { pedido.itemActual.genero = \"caballero\"; guardar(); ir(\"pedido_talla\"); return salida(\"pedido_talla\"); }\n  return salida(\"pedido_genero_simple\");\n}\n\nif (estadoActual === \"pedido_filipina_genero\") {\n  if (msgLower === \"1\" || msgLower === \"dama\")      { pedido.itemActual.genero = \"dama\";      guardar(); ir(\"pedido_filipina_tipo\"); return salida(\"pedido_filipina_tipo\"); }\n  if (msgLower === \"2\" || msgLower === \"caballero\") { pedido.itemActual.genero = \"caballero\"; guardar(); ir(\"pedido_filipina_tipo\"); return salida(\"pedido_filipina_tipo\"); }\n  return salida(\"pedido_filipina_genero\");\n}\n\nif (estadoActual === \"pedido_filipina_tipo\") {\n  var tiposF  = { \"1\":\"basica\",\"2\":\"cruzada\",\"3\":\"manga_34\",\"4\":\"manga_larga\" };\n  var labelsF = { \"1\":\"Básica\",\"2\":\"Cruzada\",\"3\":\"Manga 3/4\",\"4\":\"Manga Larga\" };\n  if (!tiposF[msgLower]) return salida(\"pedido_filipina_tipo\");\n  pedido.itemActual.subtipo = tiposF[msgLower];\n  pedido.itemActual.subtipoLabel = labelsF[msgLower];\n  guardar(); ir(\"pedido_talla\"); return salida(\"pedido_talla\");\n}\n\nif (estadoActual === \"pedido_bata_tipo\") {\n  var tiposB = {\n    \"1\":{ key:\"dama_unisangil\",       label:\"Dama Enfermería Unisangil\" },\n    \"2\":{ key:\"caballero_unisangil\",  label:\"Caballero Enfermería Unisangil\" },\n    \"3\":{ key:\"dama_psicologia\",      label:\"Dama Psicología UDI\" },\n    \"4\":{ key:\"caballero_psicologia\", label:\"Caballero Psicología UDI\" },\n    \"5\":{ key:\"dril\",                 label:\"Dril\" },\n    \"6\":{ key:\"antifluido_economico\", label:\"Antifluido Económico\" },\n    \"7\":{ key:\"dacron_manga_corta\",   label:\"Dacrón Manga Corta\" },\n    \"8\":{ key:\"dacron_manga_larga\",   label:\"Dacrón Manga Larga\" }\n  };\n  if (!tiposB[msgLower]) return salida(\"pedido_bata_tipo\");\n  pedido.itemActual.subtipo = tiposB[msgLower].key;\n  pedido.itemActual.subtipoLabel = tiposB[msgLower].label;\n  guardar(); ir(\"pedido_talla\"); return salida(\"pedido_talla\");\n}\n\nif (estadoActual === \"pedido_polo_talla\") {\n  var tu2 = msg.toUpperCase();\n  if (![\"XS\",\"S\",\"M\",\"L\"].includes(tu2)) return salida(\"pedido_polo_talla_error\");\n  pedido.itemActual.talla = tu2;\n  pedido.itemActual.precio = PRECIOS.polos.dama_caballero;\n  pedido.itemActual.subtipoLabel = \"Polo con bordado incluido\";\n  guardar(); ir(\"pedido_color\"); return salida(\"pedido_color\");\n}\n\nif (estadoActual === \"pedido_color\") {\n  pedido.itemActual.color = msg;\n  guardar(); ir(\"pedido_bordado\"); return salida(\"pedido_bordado\");\n}\n\nif (estadoActual === \"pedido_bordado\") {\n  var esSi = (msgLower === \"si\" || msgLower === \"sí\" || msgLower === \"1\");\n  var esNo = (msgLower === \"no\" || msgLower === \"2\");\n  if (!esSi && !esNo) return salida(\"pedido_bordado\");\n  if (esSi) { pedido.itemActual.bordado = \"si\"; guardar(); ir(\"pedido_bordado_tipo\"); return salida(\"pedido_bordado_tipo\"); }\n  pedido.itemActual.bordado = \"no\";\n  pedido.itemActual.bordadoLabel = \"Sin bordado\";\n  guardar(); ir(\"pedido_cantidad_item\"); return salida(\"pedido_cantidad_item\");\n}\n\nif (estadoActual === \"pedido_bordado_tipo\") {\n  var tiposT  = { \"1\":\"logo\",\"2\":\"nombre\",\"3\":\"ambos\" };\n  var labelsT = { \"1\":\"Solo logo\",\"2\":\"Solo nombre\",\"3\":\"Logo + nombre\" };\n  if (!tiposT[msgLower]) return salida(\"pedido_bordado_tipo\");\n  pedido.itemActual.bordado = tiposT[msgLower];\n  pedido.itemActual.bordadoLabel = labelsT[msgLower];\n  guardar();\n  if (tiposT[msgLower] === \"logo\") { ir(\"pedido_bordado_logo\"); return salida(\"pedido_bordado_logo\"); }\n  ir(\"pedido_bordado_nombre_texto\"); return salida(\"pedido_bordado_nombre_texto\");\n}\n\nif (estadoActual === \"pedido_bordado_logo\") {\n  pedido.itemActual.bordadoNota = \"Logo: imagen enviada por WhatsApp\";\n  guardar();\n  if (pedido.itemActual.bordado === \"ambos\") { ir(\"pedido_bordado_nombre_texto\"); return salida(\"pedido_bordado_nombre_texto\"); }\n  ir(\"pedido_cantidad_item\"); return salida(\"pedido_cantidad_item\");\n}\n\nif (estadoActual === \"pedido_bordado_nombre_texto\") {\n  pedido.itemActual.bordadoNombre = msg;\n  guardar();\n  if (pedido.itemActual.bordado === \"ambos\") { ir(\"pedido_bordado_logo\"); return salida(\"pedido_bordado_logo_despues_nombre\"); }\n  ir(\"pedido_cantidad_item\"); return salida(\"pedido_cantidad_item\");\n}\n\nif (estadoActual === \"pedido_cantidad_item\") {\n  var cant = parseInt(msg);\n  if (isNaN(cant) || cant < 1) return salida(\"pedido_cantidad_item_error\");\n  pedido.itemActual.cantidad = cant;\n  pedido.itemActual.subtotal = pedido.itemActual.precio * cant;\n  var itemListo = JSON.parse(JSON.stringify(pedido.itemActual));\n  pedido.items.push(itemListo);\n  pedido.itemActual = {};\n  guardar(); ir(\"pedido_otro_producto\");\n  return salida(\"pedido_otro_producto\", { resumenItem: resumenItem(itemListo) });\n}\n\nif (estadoActual === \"pedido_otro_producto\") {\n  if (msgLower === \"si\" || msgLower === \"sí\" || msgLower === \"1\") {\n    pedido.indice = pedido.items.length + 1;\n    pedido.itemActual = {};\n    guardar(); ir(\"pedido_categoria\");\n    return salida(\"pedido_categoria\");\n  }\n  if (msgLower === \"no\" || msgLower === \"2\") {\n    pedido.valorTotal = pedido.items.reduce(function(s,i){ return s + i.subtotal; }, 0);\n    pedido.anticipo = Math.ceil(pedido.valorTotal * 0.5);\n    guardar(); ir(\"pedido_confirmar\");\n    return salida(\"pedido_confirmar\", { resumen: resumenCompleto(pedido) });\n  }\n  return salida(\"pedido_otro_producto\");\n}\n\nif (estadoActual === \"pedido_confirmar\") {\n  if (msgLower === \"si\" || msgLower === \"sí\" || msgLower === \"1\") {\n    var pf = JSON.parse(JSON.stringify(WorkflowStaticData[\"pedido_\" + telefono]));\n    pf.fecha = new Date().toLocaleDateString('es-CO');\n    pf.resumenTexto = resumenCompleto(pf);\n    resetear();\n    return [{ json: { mensaje: msg, telefono: telefono, estado: \"pedido_listo\", pedido: pf, indice: 1 } }];\n  }\n  if (msgLower === \"no\" || msgLower === \"2\") {\n    resetear();\n    return [{ json: { mensaje: msg, telefono: telefono, estado: \"pedido_cancelado\", indice: 1 } }];\n  }\n  return salida(\"pedido_confirmar\", { resumen: resumenCompleto(pedido) });\n}\n\n// ============================================================\n// FALLBACK\n// ============================================================\nresetear();\nreturn [{ json: { mensaje: msg, telefono: telefono, estado: \"no_entendido\", indice: 1 } }];"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        96,
+        -96
+      ],
+      "id": "74b515f4-18ea-487e-b4b0-08b1395d5f21",
+      "name": "Code in JavaScript"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "👗 *CATÁLOGO DE UNIFORMES*\n¿Qué tipo de uniforme necesitas? Responde con el número:\n\n1️⃣ Uniforme completo (blusa + pantalón)\n2️⃣ Solo blusa\n3️⃣ Solo pantalón\n4️⃣ Filipina\n5️⃣ Bata\n6️⃣ Polo\n7️⃣ Gorro\n8️⃣ Delantal\n\n0️⃣ Volver al menú principal",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        752,
+        -1600
+      ],
+      "id": "d69674ae-c6cf-4b96-9025-6e9158236862",
+      "name": "Send message17",
+      "webhookId": "b7474c13-cc9e-410b-8574-2133a087910d",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/TJq0hpM.jpeg",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2544,
+        -1280
+      ],
+      "id": "914b80ea-2307-4890-9219-250d85c4e3b6",
+      "name": "Send message",
+      "webhookId": "ab576691-7ede-4825-9561-22b59778acfd",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f1e0bf2e-12ec-4ed0-a1ba-dfde33d93959"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e7080e57-dbcb-4fc4-9727-583db23bf5dd",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "821652a0-9f1b-425d-92f9-79eaf40eec8c",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "1e9340e9-64a4-4e89-9921-5baf5edafa38",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "4",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "74753033-34c7-47e3-9aca-e19823f84aa0",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "5",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "7fb351a7-9c04-498e-b69a-02f021a95bc4",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "6",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "6c4b9c84-c726-4ed4-8d42-4dd77282345b",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "7",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "906939ed-c1be-4a82-bc08-e844df326460",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "0",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        3888,
+        -2176
+      ],
+      "id": "1abae3eb-de6d-4a7f-a718-15ae9024e372",
+      "name": "Switch3"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS UNIFORMES MÉDICOS*\n\n*DAMA — Bata antifluido:*\n· Económico licrado:\n  T16=$110k · XS-S=$115k · M=$120k · L=$120k · XL=$130k · XXL=$130k · XXXL=$150k\n\n· Lafayette Rígido:\n  T16=$142k · XS-S=$142k · M=$147k · L=$155k · XL=$163k · XXL=$169k · XXXL=$183k\n\n· Lafayette Lotus:\n  T16=$208k · XS-S=$215k · M=$220k · L=$230k · XL=$238k · XXL=$244k · XXXL=$250k\n\n*CABALLERO — Bata antifluido:*\n· Lafayette Rígido Sencillo:\n  S=$158k · M=$166k · L=$176k · XL=$187k · XXL=$197k · XXXL=$205k\n\n· Lafayette Rígido Camuflado:\n  S=$174k · M=$182k · L=$192k · XL=$203k · XXL=$213k · XXXL=$221k\n\n· Lafayette Lotus:\n  S=$238k · M=$245k · L=$250k · XL=$260k · XXL=$268k · XXXL=$274k\n\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4032,
+        -2368
+      ],
+      "id": "dd5aa914-2deb-4d40-83c6-971d850ca628",
+      "name": "Send message18",
+      "webhookId": "1c01e674-5f22-481e-a050-9e789c61c6fb",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS UNIFORMES ENFERMERÍA*\n\n*DAMA:*\n· Bata Enfermería Unisangil:\n  T16-XS-S=$120k\n\n· Lafayette Rígido (blusa):\n  T16=$142k · XS-S=$142k · M=$147k · L=$155k · XL=$163k · XXL=$169k · XXXL=$183k\n\n· Lafayette Lotus (blusa):\n  T16=$208k · XS-S=$215k · M=$220k · L=$230k · XL=$238k · XXL=$244k · XXXL=$250k\n\n· Blusa Lafayette Rígido (separada):\n  16-XS-S=$87k · M=$90k · L=$94k · XL=$96k · XXL=$99k · XXXL=$103k\n\n· Pantalón Lafayette Rígido:\n  16-XS-S=$75k · M=$77k · L=$81k · XL=$84k · XXL=$87k · XXXL=$94k\n\n*CABALLERO:*\n· Bata Enfermería Unisangil:\n  S-M-L=$128k\n\n· Lafayette Rígido Sencillo:\n  S=$158k · M=$166k · L=$176k · XL=$187k · XXL=$197k · XXXL=$205k\n\n· Camisa Unicolor Rígido Lafay:\n  S=$93k · M=$96k · L=$103k · XL=$106k · XXL=$110k · XXXL=$114k\n\n· Pantalón Rígido Sencillo:\n  S=$83k · M=$88k · L=$93k · XL=$97k · XXL=$103k · XXXL=$107k\n\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4288,
+        -2304
+      ],
+      "id": "3c0e8aff-1e54-4c08-ba8d-78a3c3bc45bf",
+      "name": "Send message19",
+      "webhookId": "279c761c-7f86-4935-b240-d745592e87e3",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS UNIFORMES CAMARERO*\n\n*DAMA:*\n· Blusa Lafayette Rígido:\n  16-XS-S=$87k · M=$90k · L=$94k · XL=$96k · XXL=$99k · XXXL=$103k\n\n· Pantalón Lafayette Rígido:\n  16-XS-S=$75k · M=$77k · L=$81k · XL=$84k · XXL=$87k · XXXL=$94k\n\n· Dacrón manga corta:\n  T16-S=$45k · M-L=$48k\n\n· Dacrón manga larga:\n  T16-S=$55k · M-L=$60k\n\n*CABALLERO:*\n· Camisa Unicolor Rígido Lafay:\n  S=$93k · M=$96k · L=$103k · XL=$106k · XXL=$110k · XXXL=$114k\n\n· Pantalón Rígido Sencillo:\n  S=$83k · M=$88k · L=$93k · XL=$97k · XXL=$103k · XXXL=$107k\n\n· Dacrón manga corta:\n  T16-S=$45k · M-L=$48k\n\n· Dacrón manga larga:\n  T16-S=$55k · M-L=$60k\n\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4544,
+        -2176
+      ],
+      "id": "2bc1a502-f7cc-4c5d-b83d-e75cb63c50be",
+      "name": "Send message20",
+      "webhookId": "e177f0e5-757d-421e-9fea-be0ef66170b4",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS UNIFORMES PSICOLOGÍA*\n\n*DAMA — Licenciatura Libre:*\n  T16=$147k · XS-S=$147k · M=$152k · L=$160k · XL=$168k · XXL=$174k · XXXL=$188k\n\n*CABALLERO — Licenciatura Libre:*\n  S=$163k · M=$171k · L=$181k · XL=$192k · XXL=$202k · XXXL=$210k\n\n*DAMA — Psicología Unisangil (Psi UD):*\n  Desde $126.000\n\n*CABALLERO — Psicología Unisangil (Psi UD):*\n  Desde $134.000\n\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4992,
+        -2032
+      ],
+      "id": "263bb889-c118-4626-a1d0-7219d414e7c8",
+      "name": "Send message21",
+      "webhookId": "480c74cd-f3f5-4b8e-b927-39be92edf5cd",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS UNIFORMES UNISANGIL*\n\n*ENFERMERÍA DAMA:*\n· Lafayette Rígido:\n  T16=$142k · XS-S=$142k · M=$147k · L=$155k · XL=$163k · XXL=$169k · XXXL=$183k\n· Bata Enfermería Unisangil: T16-XS-S=$120k\n\n*ENFERMERÍA CABALLERO:*\n· Lafayette Rígido Sencillo:\n  S=$158k · M=$166k · L=$176k · XL=$187k · XXL=$197k · XXXL=$205k\n· Bata Enfermería Unisangil: S-M-L=$128k\n\n*PSICOLOGÍA DAMA (Psi UD):*\n  Desde $126.000\n\n*PSICOLOGÍA CABALLERO (Psi UD):*\n  Desde $134.000\n\n*MICROTEC DAMA:*\n  T16=$170k · XS-S=$170k · M=$178k · L=$185k · XL=$195k\n\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4576,
+        -1936
+      ],
+      "id": "12d2a333-a722-436a-96a6-e278ca16c1d4",
+      "name": "Send message22",
+      "webhookId": "abe86e0b-f0c5-46cf-a98d-6a9c0cc950ff",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS DOTACIÓN EMPRESARIAL*\n\n*DAMA:*\n· Blusa Lafayette Rígido:\n  16-XS-S=$87k · M=$90k · L=$94k · XL=$96k · XXL=$99k · XXXL=$103k\n\n· Pantalón Lafayette Rígido:\n  16-XS-S=$75k · M=$77k · L=$81k · XL=$84k · XXL=$87k · XXXL=$94k\n\n· Dacrón manga corta: T16-S=$45k · M-L=$48k\n· Dacrón manga larga: T16-S=$55k · M-L=$60k\n\n*CABALLERO:*\n· Camisa Unicolor Rígido Lafay:\n  S=$93k · M=$96k · L=$103k · XL=$106k · XXL=$110k · XXXL=$114k\n\n· Pantalón Rígido Sencillo:\n  S=$83k · M=$88k · L=$93k · XL=$97k · XXL=$103k · XXXL=$107k\n\n· Dacrón manga corta: T16-S=$45k · M-L=$48k\n· Dacrón manga larga: T16-S=$55k · M-L=$60k\n\n*SUDADERA 3 PIEZAS (tela Adidas):*\n  6-8=$93k · 10-12=$96k · 14-16=$103k · S=$110k · M=$114k · L=$124k · XL=$134k · XXL=$144k\n\n🧾 Factura electrónica disponible.\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4416,
+        -1808
+      ],
+      "id": "bee06fcc-5e06-4e8c-bb79-07eb6c0ab0df",
+      "name": "Send message23",
+      "webhookId": "6fe52df5-784b-403b-85f7-58579e92f847",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "💰 *PRECIOS OFICIOS VARIOS*\n\n*DAMA:*\n· Blusa Lafayette Rígido:\n  16-XS-S=$87k · M=$90k · L=$94k · XL=$96k · XXL=$99k · XXXL=$103k\n\n· Pantalón Lafayette Rígido:\n  16-XS-S=$75k · M=$77k · L=$81k · XL=$84k · XXL=$87k · XXXL=$94k\n\n· Antifluido económico: T16-XS-S-M=$80k\n· Dril: T16-XS-S-M=$80k\n· Dacrón manga corta: T16-S=$45k · M-L=$48k\n· Dacrón manga larga: T16-S=$55k · M-L=$60k\n\n*CABALLERO:*\n· Camisa Unicolor Rígido Lafay:\n  S=$93k · M=$96k · L=$103k · XL=$106k · XXL=$110k · XXXL=$114k\n\n· Pantalón Rígido Sencillo:\n  S=$83k · M=$88k · L=$93k · XL=$97k · XXL=$103k · XXXL=$107k\n\n· Dacrón manga corta: T16-S=$45k · M-L=$48k\n· Dacrón manga larga: T16-S=$55k · M-L=$60k\n\n📌 Anticipo 50% · Efectivo o Nequi\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4224,
+        -1680
+      ],
+      "id": "d7405bae-1426-4334-874a-092a6e573c95",
+      "name": "Send message24",
+      "webhookId": "64578d2b-277d-40f6-817a-e3ffeb3057b4",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "volviendo",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4048,
+        -1520
+      ],
+      "id": "f6612ba9-0684-46da-8073-8e43f5393ee3",
+      "name": "Send message25",
+      "webhookId": "a4b18b75-df2c-4972-a3a5-abf35447d95f",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "ed9c772f-a43c-4e8d-9878-5aaef9c15bd9",
+              "leftValue": "={{ $json.messages }}",
+              "rightValue": "",
+              "operator": {
+                "type": "boolean",
+                "operation": "exists",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "0ea34f7f-d9a4-42df-83a2-ebaec43c09b2",
+              "leftValue": "={{ $json.messages[0].type }}",
+              "rightValue": "image",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        -400,
+        -96
+      ],
+      "id": "27d8de1b-50d7-4073-af82-6a9d4388e977",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "573138090276",
+        "messageType": "image",
+        "mediaPath": "useMedian8n",
+        "additionalFields": {
+          "mediaCaption": "=📸 Foto recibida de cliente\nNúmero: {{ $('If').first().json.messages[0].from }}"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        224,
+        -1056
+      ],
+      "id": "21866d5a-3cbd-4e01-a4fc-65632458f8f1",
+      "name": "Send message26",
+      "webhookId": "be4dfe08-c825-4f58-b933-e1e132906ded",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $('If').first().json.messages[0].from }}",
+        "textBody": "📸 ¡Foto recibida!\n\nLa dueña revisará tu diseño y te responderá pronto.\n\nSi tienes alguna duda adicional escribe *menu*.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        368,
+        -1056
+      ],
+      "id": "dfe468ca-e62d-4c6e-b8ed-d8d43a3f4e6a",
+      "name": "Send message27",
+      "webhookId": "ddc2b4ad-bf75-4225-9159-3b7e56f99f02",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "=https://graph.facebook.com/v18.0/{{ $json.messages[0].image.id }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "response": {
+            "response": {}
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        -160,
+        -1056
+      ],
+      "id": "bd0c3d1d-70a9-46f1-8083-107ed8c19f18",
+      "name": "HTTP Request",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7qYsklgj3nQXFPmz",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "url": "={{ $json.url }}",
+        "authentication": "genericCredentialType",
+        "genericAuthType": "httpHeaderAuth",
+        "options": {
+          "response": {
+            "response": {
+              "responseFormat": "file"
+            }
+          }
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.4,
+      "position": [
+        48,
+        -1056
+      ],
+      "id": "26ce4d3a-8a92-42b8-a260-aab3ccb570c7",
+      "name": "HTTP Request1",
+      "credentials": {
+        "httpHeaderAuth": {
+          "id": "7qYsklgj3nQXFPmz",
+          "name": "Header Auth account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.mensaje }}",
+        "options": {
+          "systemMessage": "Eres el asistente virtual de LH Uniformes, una tienda especializada en uniformes antifluido ubicada en San Gil, Santander, Colombia. Tu nombre es \"LH Assistant\".\n\n━━━━━━━━━━━━━━━━━━━━━\nPERSONALIDAD Y TONO\n━━━━━━━━━━━━━━━━━━━━━\n- Amable, cercano y profesional\n- Respuestas concisas y directas — máximo 3-4 párrafos\n- Usa emojis con moderación para hacer el chat más agradable\n- Siempre en español colombiano natural\n- Si el cliente escribe con errores ortográficos, entiende el contexto y responde sin corregirlo\n- Nunca inventes información que no esté en este prompt\n- Si no tienes la información exacta, di: \"Para esa información te recomiendo contactarnos directamente en nuestra tienda, Carrera 9 #8-66\"\n\n━━━━━━━━━━━━━━━━━━━━━\nINFORMACIÓN GENERAL\n━━━━━━━━━━━━━━━━━━━━━\n- Nombre: LH Uniformes\n- Dirección: Carrera 9 #8-66, San Gil, Santander\n- Horario: Lunes a viernes 8am-12pm y 2pm-6pm · Sábados 8am-12pm · Domingos cerrado\n- Métodos de pago: Efectivo y Nequi\n- Anticipo: mínimo 50% del valor total para iniciar la confección\n- Domicilios: sí, se hacen envíos\n- Factura electrónica: sí, disponible bajo solicitud\n- Llamadas WhatsApp: no se pueden atender mientras el chatbot está activo\n\n━━━━━━━━━━━━━━━━━━━━━\nPRODUCTOS QUE MANEJAMOS\n━━━━━━━━━━━━━━━━━━━━━\n1. Uniformes completos (blusa + pantalón) dama y caballero\n2. Solo blusa o solo pantalón por separado\n3. Filipinas (Básica, Cruzada, Manga 3/4, Manga Larga)\n4. Batas (Enfermería, Psicología, Dril, Antifluido, Dacrón)\n5. Sudaderas 3 piezas tela Adidas\n6. Polos (incluyen bordado)\n7. Gorros antifluido\n8. Delantales antifluido\n9. Uniformes universitarios (Unisangil, Psicología Libre, Microtec)\n\nTelas disponibles:\n- Antifluido Económico Licrado\n- Antifluido Lafayette Rígido (sencillo o camuflado)\n- Antifluido Lafayette Lotus (premium)\n- Microtec\n- Dacrón manga corta y manga larga\n- Dril\n- Tela Adidas (sudaderas)\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — UNIFORMES COMPLETOS DAMA\n(blusa + pantalón)\n━━━━━━━━━━━━━━━━━━━━━\nEconómico Licrado Sencillo:\nT16=$110k · XS-S=$115k · M=$120k · L=$120k · XL=$130k · XXL=$130k · XXXL=$150k\n\nEconómico Licrado Camuflado:\nT16=$130k · XS-S=$135k · M=$140k · L=$140k · XL=$150k · XXL=$150k · XXXL=$170k\n\nLafayette Rígido Sencillo:\nT16=$142k · XS-S=$142k · M=$147k · L=$155k · XL=$163k · XXL=$169k · XXXL=$183k\n\nLafayette Rígido Camuflado:\nT16=$162k · XS-S=$162k · M=$167k · L=$175k · XL=$183k · XXL=$189k · XXXL=$203k\n\nLafayette Lotus:\nT16=$208k · XS-S=$215k · M=$220k · L=$230k · XL=$238k · XXL=$244k · XXXL=$250k\n\nMicrotec:\nT16=$170k · XS-S=$170k · M=$178k · L=$185k · XL=$195k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — UNIFORMES COMPLETOS CABALLERO\n━━━━━━━━━━━━━━━━━━━━━\nLafayette Rígido Sencillo:\nS=$158k · M=$166k · L=$176k · XL=$187k · XXL=$197k · XXXL=$205k\n\nLafayette Rígido Camuflado:\nS=$174k · M=$182k · L=$192k · XL=$203k · XXL=$213k · XXXL=$221k\n\nLafayette Lotus:\nS=$238k · M=$245k · L=$250k · XL=$260k · XXL=$268k · XXXL=$274k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — SOLO BLUSA\n━━━━━━━━━━━━━━━━━━━━━\nDama:\n16-XS-S=$87k · M=$90k · L=$94k · XL=$96k · XXL=$99k · XXXL=$103k\n\nCaballero:\n16-XS-S=$93k · M=$96k · L=$103k · XL=$106k · XXL=$110k · XXXL=$114k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — SOLO PANTALÓN\n━━━━━━━━━━━━━━━━━━━━━\nDama:\n16-XS-S=$75k · M=$77k · L=$81k · XL=$84k · XXL=$87k · XXXL=$94k\n\nCaballero:\n16-XS-S=$83k · M=$88k · L=$93k · XL=$97k · XXL=$103k · XXXL=$107k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — FILIPINAS DAMA\n━━━━━━━━━━━━━━━━━━━━━\nFilipina Básica:\n16-XS-S=$87k · M=$90k · L=$94k · XL=$96k · XXL=$99k\n\nFilipina Cruzada:\n16-XS-S=$99k · M=$102k · L=$106k · XL=$108k · XXL=$111k\n\nFilipina Manga 3/4:\n16-XS-S=$120k · M=$128k · L=$128k · XL=$134k\n\nFilipina Manga Larga:\n16-XS-S=$120k · M=$128k · L=$128k · XL=$134k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — FILIPINAS CABALLERO\n━━━━━━━━━━━━━━━━━━━━━\nFilipina Básica:\nS=$93k · M=$96k · L=$103k · XL=$106k · XXL=$110k\n\nFilipina Cruzada:\nS=$105k · M=$108k · L=$115k · XL=$118k · XXL=$122k\n\nFilipina Manga 3/4:\nS=$128k · M=$134k · L=$140k · XL=$145k\n\nFilipina Manga Larga:\nS=$128k · M=$134k · L=$140k · XL=$145k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — BATAS\n━━━━━━━━━━━━━━━━━━━━━\nBata Enfermería Unisangil Dama: T16-XS-S=$120k\nBata Enfermería Unisangil Caballero: S-M-L=$128k\nBata Psicología UDI Dama: T16-XS-S=$126k\nBata Psicología UDI Caballero: S-M-L=$134k\nBata Dril: T16-XS-S-M=$80k\nBata Antifluido Económico: T16-XS-S-M=$80k\nBata Dacrón Manga Corta: T16-S=$45k · M-L=$48k\nBata Dacrón Manga Larga: T16-S=$55k · M-L=$60k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — UNIFORMES UNIVERSITARIOS DAMA\n━━━━━━━━━━━━━━━━━━━━━\nEnfermería Unisangil (Lafayette Rígido):\nT16=$142k · XS-S=$142k · M=$147k · L=$155k · XL=$163k · XXL=$169k · XXXL=$183k\n\nPsicología Licenciatura Libre:\nT16=$147k · XS-S=$147k · M=$152k · L=$160k · XL=$168k · XXL=$174k · XXXL=$188k\n\nMicrotec:\nT16=$170k · XS-S=$170k · M=$178k · L=$185k · XL=$195k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — UNIFORMES UNIVERSITARIOS CABALLERO\n━━━━━━━━━━━━━━━━━━━━━\nEnfermería Unisangil (Lafayette Rígido):\nS=$158k · M=$166k · L=$176k · XL=$187k · XXL=$197k · XXXL=$205k\n\nPsicología Licenciatura Libre:\nS=$163k · M=$171k · L=$181k · XL=$192k · XXL=$202k · XXXL=$210k\n\n━━━━━━━━━━━━━━━━━━━━━\nPRECIOS 2026 — SUDADERAS, POLOS, GORROS Y DELANTALES\n━━━━━━━━━━━━━━━━━━━━━\nSudadera 3 piezas tela Adidas:\n6-8=$93k · 10-12=$96k · 14-16=$103k · S=$110k · M=$114k · L=$124k · XL=$134k · XXL=$144k\n\nPolo (dama y caballero, XS hasta L, incluye bordado): $58k\n\nGorro Antifluido Rígido: $25k\n\nDelantal Antifluido Rígido: $35k\n\n━━━━━━━━━━━━━━━━━━━━━\nBORDADOS\n━━━━━━━━━━━━━━━━━━━━━\n- Sí se hacen bordados en uniformes nuevos y en prendas ya confeccionadas\n- El precio depende del diseño y la complejidad\n- Para cotizar, el cliente debe enviar una foto del diseño\n- Para prendas ya hechas por el cliente, se recomienda acercarse al local\n\n━━━━━━━━━━━━━━━━━━━━━\nTIEMPOS DE ENTREGA\n━━━━━━━━━━━━━━━━━━━━━\n- Se trabaja estrictamente por orden de llegada\n- El tiempo exacto se confirma al momento de hacer el pedido según la carga de trabajo\n- No hay tiempo fijo — depende del trabajo pendiente al momento del pedido\n\n━━━━━━━━━━━━━━━━━━━━━\nPEDIDOS ESPECIALES\n━━━━━━━━━━━━━━━━━━━━━\n- Pedidos corporativos: sí, pedidos grandes en distintas tallas para empresas\n- Pedidos repetidos: sí, se puede repetir el mismo modelo de un pedido anterior\n- Personalización: sí, con foto del diseño\n\n━━━━━━━━━━━━━━━━━━━━━\nCÓMO RESPONDER PREGUNTAS DE PRECIO\n━━━━━━━━━━━━━━━━━━━━━\nCuando el cliente pregunte por el precio de un uniforme:\n1. Identifica el tipo de producto (uniforme completo, filipina, bata, gorro, etc.)\n2. Identifica si es dama o caballero (si no lo dice, pregunta)\n3. Identifica la talla (si no la dice, pregunta)\n4. Identifica la tela si aplica (Económico, Lafayette, Lotus, etc.)\n5. Da el precio exacto de la tabla\n6. Recuérdale el anticipo mínimo del 50%\n\n━━━━━━━━━━━━━━━━━━━━━\nREGLAS IMPORTANTES\n━━━━━━━━━━━━━━━━━━━━━\n- Nunca inventes precios ni información que no esté en este prompt\n- Si el cliente quiere hacer un pedido, dile: \"Para hacer tu pedido escribe *menu* y elige la opción 5️⃣\"\n- Si el cliente quiere ver el catálogo, dile que escriba *menu*\n- Si la pregunta no tiene nada que ver con uniformes o el negocio, responde amablemente que solo puedes ayudar con temas de LH Uniformes\n- Si necesita atención personalizada (bordados complejos, pedidos corporativos, tiempos exactos): \"Te esperamos en nuestra tienda 📍 Carrera 9 #8-66 o escribe *menu* para más opciones\"\n\n━━━━━━━━━━━━━━━━━━━━━\nCIERRE DE CADA RESPUESTA\n━━━━━━━━━━━━━━━━━━━━━\n- Si resolviste la duda: \"¿Tienes alguna otra pregunta? 😊\"\n- Si necesita hacer un pedido: \"Para hacer tu pedido escribe *menu* y elige la opción 5️⃣\"\n- Si requiere atención presencial: \"Te esperamos en nuestra tienda 📍 Carrera 9 #8-66 o escribe *menu* para más opciones\""
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 3.1,
+      "position": [
+        3696,
+        1264
+      ],
+      "id": "27813d9e-d534-4348-88c8-d0ce358384e2",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "model": "llama-3.3-70b-versatile",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        3680,
+        1616
+      ],
+      "id": "19165342-403e-4de5-8917-2e89e5b85348",
+      "name": "Groq Chat Model",
+      "credentials": {
+        "groqApi": {
+          "id": "HRKTORZePnUZPIDQ",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "🤖 *Asistente Virtual LH Uniformes*\n\nHola, soy el asistente virtual de LH Uniformes. Puedo responder tus preguntas sobre precios, tallas, tiempos de entrega, bordados y más.\n\n¿En qué te puedo ayudar? Escríbeme tu pregunta 😊\n\n_(Escribe *menu* cuando quieras volver al menú principal)_",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3120,
+        1184
+      ],
+      "id": "abdbd58c-1e57-46cb-83fc-5540c99735d8",
+      "name": "Send message37",
+      "webhookId": "c3bcd3f0-2484-4662-baac-985ea8fb54b0",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $('Code in JavaScript').first().json.telefono }}",
+        "textBody": "={{ $json.output }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4080,
+        1264
+      ],
+      "id": "58e17f5d-49fe-4b56-9766-b96c81a6db87",
+      "name": "Send message38",
+      "webhookId": "47f64b84-b25d-4212-b76d-37d167e47e5b",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "🧵 *BORDADOS EN UNIFORMES*\n\n¿El uniforme es nuevo o ya lo tienes confeccionado?\n\n1️⃣ Quiero un uniforme nuevo con bordado\n2️⃣ Ya tengo el uniforme y quiero bordarlo\n\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1824,
+        1200
+      ],
+      "id": "8fa29e2d-d61d-4f1e-b62a-5d3188b55cc3",
+      "name": "Send message39",
+      "webhookId": "bf8debb0-5296-492a-8e9b-f2bb5d3bc61c",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "👍 Perfecto, podemos hacer tu uniforme con bordado incluido.\n\nPara cotizarlo necesitamos:\n📸 Una foto del diseño o logo que quieres bordar\n\nEnvíanos la foto y la dueña te responderá con el precio y los detalles.\n\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1440,
+        1232
+      ],
+      "id": "6e4781b8-b98e-4a90-876e-752affc8ea4f",
+      "name": "Send message40",
+      "webhookId": "5bae8824-01fe-4df1-8d47-10d4dccd4d9e",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "👍 Con gusto bordamos tu uniforme.\n\nPara uniformes ya confeccionados lo mejor es que te acerques a nuestro local para que podamos evaluar el trabajo en persona.\n\n📍 *Dirección:* Carrera 9 #8-66, San Gil\n🕐 *Horario:* Lunes a viernes 8am-12pm y 2pm-6pm · Sábados 8am-12pm\n\nSi quieres enviarnos una foto del diseño antes de venir, puedes hacerlo aquí y te damos una idea del precio 😊\n\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1616,
+        1296
+      ],
+      "id": "1abf2932-7abb-4237-bf7b-faadeddf711a",
+      "name": "Send message41",
+      "webhookId": "41f73ace-cecd-44d9-9813-e3f7c583eafa",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "Para bordados en uniformes propios te recomendamos acercarte al local para evaluar el trabajo.\n\n📍 Carrera 9 #8-66, San Gil\n\nSi tienes el diseño en imagen, envíanoslo por aquí y te respondemos 😊\n\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1824,
+        1376
+      ],
+      "id": "34ee7a04-b40f-441f-9cad-e851cbfd0d45",
+      "name": "Send message42",
+      "webhookId": "30751064-ed51-4b50-833a-5b4ff0987246",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "No entendí bien tu mensaje, pero estoy aquí para ayudarte.\n\nEscribe el número de la opción que necesitas:\n\n1️⃣ Ver catálogo por profesión\n2️⃣ Consultar precios\n3️⃣ Guía de tallas\n4️⃣ Información del local\n5️⃣ Hacer un pedido\n6️⃣ Bordados en uniformes\n7️⃣ Estado de mi pedido\n8️⃣ Hablar con el asistente virtual\n\nO escribe *menu* para ver este menú en cualquier momento.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1952,
+        1536
+      ],
+      "id": "eabb4091-bf40-4b64-80e6-e82870c93e43",
+      "name": "Send message43",
+      "webhookId": "59129d6b-c21d-42b1-aad5-912c5971e4d7",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1_8wdTlRHQoZFTEfNH5RH8RPWgx5xNYcLGdIGPXVdfDk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Hoja 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_8wdTlRHQoZFTEfNH5RH8RPWgx5xNYcLGdIGPXVdfDk/edit#gid=0"
+        },
+        "filtersUI": {
+          "values": [
+            {
+              "lookupColumn": "telefono",
+              "lookupValue": "={{ $('Code in JavaScript').first().json.busqueda }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        2400,
+        1664
+      ],
+      "id": "4106275f-c704-48cf-8ee9-70790ec0016c",
+      "name": "Get row(s) in sheet",
+      "alwaysOutputData": true,
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "W38X2EaE8X7rQPL2",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 3
+          },
+          "conditions": [
+            {
+              "id": "4979ca20-8889-4d65-89b1-f9c0c9bd5acd",
+              "leftValue": "={{ Object.keys($json).length }}",
+              "rightValue": 0,
+              "operator": {
+                "type": "number",
+                "operation": "gt"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.3,
+      "position": [
+        2656,
+        1664
+      ],
+      "id": "092648e2-84ce-4d1d-a144-83cd06f99bb1",
+      "name": "If2",
+      "alwaysOutputData": false
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $('Code in JavaScript').first().json.telefono }}",
+        "textBody": "={{ $('Get row(s) in sheet').all().map(function(row, idx) { return \"📦 *Producto \" + (idx+1) + \":*\\n• Uniforme: \" + row.json.uniforme + \"\\n• Talla: \" + row.json.talla + \"\\n• Género: \" + row.json.genero + \"\\n• Color: \" + (row.json.color||'') + \"\\n• Bordado: \" + (row.json.bordado||'') + \"\\n• Cantidad: \" + row.json.cantidad + \"\\n• Estado: *\" + row.json.estado + \"*\\n• Fecha: \" + row.json.fecha + \"\\n━━━━━━━━━━━━━━━━━━━━━\"; }).join(\"\\n\") }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2912,
+        1552
+      ],
+      "id": "c17cfe1d-9e42-48f2-8bd5-60e3447f412e",
+      "name": "Send message45",
+      "webhookId": "e65e44b9-d700-46d9-9f1a-d082f8b39da6",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $('Code in JavaScript').first().json.telefono }}",
+        "textBody": "🔍 No encontramos un pedido registrado con ese número.\n\nRecuerda que los pedidos se registran con el número de celular que usaste al hacer el pedido.\n\nSi tienes dudas escribe *menu* y elige la opción 5️⃣ para hacer un pedido o la opción 8️⃣ para hablar con el asistente.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2928,
+        1760
+      ],
+      "id": "796e41a0-b949-4f5f-bd74-b0f3e8f703b2",
+      "name": "Send message46",
+      "webhookId": "58a100c9-2fd6-43f7-be91-2c7c15650685",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "🔍 *ESTADO DE TU PEDIDO*\n\nConsultando el estado de tu pedido...",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2160,
+        1664
+      ],
+      "id": "5342f644-e5ba-4280-a978-7d97528913d4",
+      "name": "Send message44",
+      "webhookId": "d64bc75d-0ffb-4950-9f70-d594a526dd12",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "👋 ¡Hola! Bienvenido a *LH Uniformes* ✂️\n\nFabricamos uniformes antifluido de alta calidad para diferentes profesiones.\n\n¿En qué te podemos ayudar? Responde con el número:\n\n1️⃣ Ver catálogo por profesión\n2️⃣ Consultar precios\n3️⃣ Guía de tallas\n4️⃣ Información del local\n5️⃣ Hacer un pedido\n6️⃣ Bordados en uniformes\n7️⃣ Estado de mi pedido\n8️⃣ Hablar con el asistente virtual\n\nEscribe *menu* en cualquier momento para volver aquí.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        944,
+        -2032
+      ],
+      "id": "512aadaa-62e1-4939-be41-f0addd41bc34",
+      "name": "Send message4",
+      "webhookId": "b7872017-dcd7-4a5b-adde-33768726db54",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "📏 *GUÍA DE TALLAS*\n\n¿Para quién es el uniforme?\n\n1️⃣ Dama\n2️⃣ Caballero\n\nEscribe *menu* para volver.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1408,
+        1664
+      ],
+      "id": "ef436505-6898-44b6-add2-e194faad011d",
+      "name": "Send message1",
+      "webhookId": "3870d433-bb9d-4912-a426-6da9c1a19db0",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/Eymxfd6.jpeg",
+        "additionalFields": {
+          "mediaCaption": "📏 Tabla de tallas Dama — LH Uniformes\nTodas las medidas en centímetros.\nEscribe *menu* para volver."
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1296,
+        1952
+      ],
+      "id": "8c892b01-32ee-416b-a263-342352346b32",
+      "name": "Send message5",
+      "webhookId": "11edacd5-26e8-4c7e-bcd7-43eb078d05b2",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/S2AEP9B.png",
+        "additionalFields": {
+          "mediaCaption": "📏 Tabla de tallas Caballero — LH Uniformes\nTodas las medidas en centímetros.\nEscribe *menu* para volver."
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1376,
+        1776
+      ],
+      "id": "65a78a6f-04fb-4c9f-95cb-779dff872dcd",
+      "name": "Send message14",
+      "webhookId": "58f10669-db00-48f6-85bd-597fd7d56e2d",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/KOXvRA3.png",
+        "additionalFields": {
+          "mediaCaption": "👗 *UNIFORMES COMPLETOS (Blusa + Pantalón)*\n\nDisponible para dama y caballero en:\n- Económico Licrado (sencillo o camuflado)\n- Lafayette Rígido (sencillo o camuflado)\n- Lafayette Lotus\n- Microtec (solo dama)\n- Unisangil - Enfermería\n- Psicología Licenciatura Libre\n\nTallas dama: T16 hasta XXXL\nTallas caballero: S hasta XXXL\n\n📌 Para ver los códigos y fotos de cada estilo visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n💰 Ver precios → escribe *menu* y elige opción 2️⃣\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2224,
+        -2560
+      ],
+      "id": "6c594b37-e50f-4367-b2b3-299270f98b4d",
+      "name": "Send message15",
+      "webhookId": "a8e2141c-c207-44ae-8db9-f548cdf20b85",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/KOXvRA3.png",
+        "additionalFields": {
+          "mediaCaption": "👚 *SOLO BLUSA O CAMISETA*\n\nDisponible para dama y caballero.\nTallas dama: T16 hasta XXXL\nTallas caballero: T16 hasta XXXL\n\n📌 Para ver los códigos y fotos de cada estilo visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n💰 Ver precios → escribe *menu* y elige opción 2️⃣\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2512,
+        -2432
+      ],
+      "id": "9a971a2f-7bbc-427b-8dd7-13d8975477f3",
+      "name": "Send message16",
+      "webhookId": "a8e2141c-c207-44ae-8db9-f548cdf20b85",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/1ywtKPb.png",
+        "additionalFields": {
+          "mediaCaption": "🎩 *GORROS*\n\nGorro Antifluido Rígido\n💰 Precio: $25.000\n\n📌 Para ver más detalles visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2848,
+        -2016
+      ],
+      "id": "444a7257-fc37-4c25-a0ca-d7c651811c5f",
+      "name": "Send message6",
+      "webhookId": "da2ed866-24d1-4649-a061-605284f07437",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/87nJcQy.png",
+        "additionalFields": {
+          "mediaCaption": "🍽️ *DELANTALES*\n\nDelantal Antifluido Rígido\n💰 Precio: $35.000\n\n📌 Para ver más detalles visita nuestro catálogo:\n🔗 https://www.canva.com/design/DAGPGgiqqro/-upsv47OBpvBWV1SeatYJQ/edit\n\n🛒 Hacer pedido → escribe *menu* y elige opción 5️⃣"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2576,
+        -1904
+      ],
+      "id": "48fbdbcb-9980-4edb-a41f-6c20865f79ed",
+      "name": "Send message7",
+      "webhookId": "9a2d72d2-ca07-452b-8513-333e7d84975a",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¡Perfecto! Vamos a tomar tu pedido 📝\n\nPrimero, ¿cuál es tu *nombre completo*?",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        688,
+        16
+      ],
+      "id": "4587a42f-a47d-4ba6-bfb5-8296c43b395c",
+      "name": "Send message11",
+      "webhookId": "75e93503-c5a6-48b0-b73d-6e0d93fc332b",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "Por favor escribe tu nombre completo para continuar. ✍️",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        896,
+        48
+      ],
+      "id": "1e25b294-3637-43bc-bdc0-3f468e8ea7be",
+      "name": "Send message47",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "={{ \"Gracias, \" + $json.pedido.nombre + \" 😊\\n\\n¿Cuál es tu *número de celular*?\\n(Este número quedará registrado en tu pedido)\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1136,
+        80
+      ],
+      "id": "b46e547a-6b03-404f-ba0f-91a3a8877390",
+      "name": "Send message48",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "El número no parece válido. Por favor escribe solo los dígitos de tu celular. 📱\nEjemplo: 3201234567",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1344,
+        112
+      ],
+      "id": "0590e1eb-9279-465b-95ee-ef1123a8969a",
+      "name": "Send message49",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "={{ \"Producto #\" + $json.indice + \" — ¿Qué tipo de producto necesitas?\\n\\n1️⃣ Uniforme completo (blusa + pantalón)\\n2️⃣ Solo blusa\\n3️⃣ Solo pantalón\\n4️⃣ Filipina\\n5️⃣ Bata\\n6️⃣ Polo\\n7️⃣ Gorro\\n8️⃣ Delantal\\n\\nEscribe el número de tu opción:\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1568,
+        144
+      ],
+      "id": "c39e9952-532f-4f0c-809c-fb3e32b50f30",
+      "name": "Send message50",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Cuál es el *código del uniforme* que deseas?\n\nEjemplos: LH01, LH02, LH03...\n\nSi no tienes el código, revisa el catálogo y luego vuelve a hacer el pedido.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1792,
+        176
+      ],
+      "id": "15bfc3b1-8aac-477a-852e-4e7b9f6f2365",
+      "name": "Send message51",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿El uniforme es para?\n\n1️⃣ Dama\n2️⃣ Caballero",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2000,
+        208
+      ],
+      "id": "5440c86c-0382-4231-8189-b2002008d507",
+      "name": "Send message52",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Para quién es?\n\n1️⃣ Dama\n2️⃣ Caballero",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2176,
+        240
+      ],
+      "id": "967a7368-250a-46c8-aaef-a840f2ea8b93",
+      "name": "Send message53",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué tipo de tela prefieres? (Dama)\n\n1️⃣ Económico Licrado\n2️⃣ Lafayette Rígido\n3️⃣ Lafayette Lotus\n4️⃣ Microtec\n5️⃣ Unisangil - Enfermería\n6️⃣ Psicología Libre",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2336,
+        272
+      ],
+      "id": "5c1973e0-e37b-4a1d-ae48-faf8c3e4ef38",
+      "name": "Send message54",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué tipo de tela prefieres? (Caballero)\n\n1️⃣ Lafayette Rígido\n2️⃣ Lafayette Lotus\n3️⃣ Unisangil - Enfermería\n4️⃣ Psicología Libre",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2512,
+        320
+      ],
+      "id": "4e5fbcd3-f969-4691-9c43-f026d1d793ea",
+      "name": "Send message55",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿El pantalón va en *diseño camuflado*? \n\n1️⃣ Sí (+ $20.000)\n2️⃣ No (sencillo)",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2704,
+        352
+      ],
+      "id": "fe525789-f96e-4451-86a5-2f8e04d2d2b8",
+      "name": "Send message56",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Cuál es la talla?\n\nTallas disponibles: *16 / XS / S / M / L / XL / XXL / XXXL*\n\n(No todas las tallas aplican para todos los productos. Si tu talla no está disponible te avisaremos.)",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2896,
+        384
+      ],
+      "id": "9913acbe-ae85-40b9-a43d-793e2f2cc85e",
+      "name": "Send message57",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "⚠️ Talla no reconocida. Por favor escribe una de estas opciones:\n*16 / XS / S / M / L / XL / XXL / XXXL*",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3056,
+        416
+      ],
+      "id": "b7c237f3-e7ac-4821-8473-5e128451a113",
+      "name": "Send message58",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "={{ \"⚠️ La talla *\" + $json.talla + \"* no está disponible para este producto.\\n\\nPor favor elige otra talla:\\n*16 / XS / S / M / L / XL / XXL / XXXL*\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3248,
+        448
+      ],
+      "id": "a9eae022-27df-4dd3-900b-3e43975368ef",
+      "name": "Send message59",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿La filipina es para?\n\n1️⃣ Dama\n2️⃣ Caballero",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3424,
+        480
+      ],
+      "id": "8dc62fdc-1f5f-4cfc-ac9f-f92297863117",
+      "name": "Send message60",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué tipo de filipina?\n\n1️⃣ Básica\n2️⃣ Cruzada\n3️⃣ Manga 3/4\n4️⃣ Manga Larga",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3616,
+        512
+      ],
+      "id": "a83717ec-0168-4795-b981-9e4ac3de0cbc",
+      "name": "Send message61",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué tipo de bata necesitas?\n\n1️⃣ Dama - Enfermería Unisangil\n2️⃣ Caballero - Enfermería Unisangil\n3️⃣ Dama - Psicología UDI\n4️⃣ Caballero - Psicología UDI\n5️⃣ Dril\n6️⃣ Antifluido Económico\n7️⃣ Dacrón Manga Corta\n8️⃣ Dacrón Manga Larga",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3792,
+        560
+      ],
+      "id": "7a6556ef-2fef-4fea-8f3c-89fa5ca3c390",
+      "name": "Send message62",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué talla de polo?\n\nTallas disponibles: *XS / S / M / L*\n(Incluye bordado en el precio 🪡)",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        3968,
+        608
+      ],
+      "id": "eebac9c9-6b08-4eb7-9f7f-b376c6895be1",
+      "name": "Send message63",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "⚠️ Para los polos solo tenemos tallas *XS, S, M, L*.\nPor favor escribe una de esas opciones.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4128,
+        640
+      ],
+      "id": "fb63604a-274f-449b-8d09-d21fbe9375e3",
+      "name": "Send message64",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué color deseas para la tela? 🎨\n\nPuedes escribir el código de color (ej: 110601) o el nombre del color.\n\nSi no tienes el código, revisa el catálogo",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4288,
+        672
+      ],
+      "id": "4b9da1f9-ee58-4c34-aa7c-7f8f396b791c",
+      "name": "Send message65",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Deseas agregar bordado al uniforme? 🪡\n\n1️⃣ Sí\n2️⃣ No",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4448,
+        704
+      ],
+      "id": "5b250a49-de34-437c-bc7a-5f048854bdb4",
+      "name": "Send message66",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Qué tipo de bordado?\n\n1️⃣ Solo logo (enviarás imagen)\n2️⃣ Solo nombre\n3️⃣ Logo + nombre",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4608,
+        736
+      ],
+      "id": "a21cc5a8-1663-4d67-960e-02f911def112",
+      "name": "Send message67",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "Por favor *envía la imagen del logo* que deseas bordar 📸\n\n(Envíala como imagen directamente en este chat)",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4768,
+        784
+      ],
+      "id": "70c604d4-3ca0-4204-8558-1e71fc76c0ba",
+      "name": "Send message68",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "Lo siento, no entendí tu mensaje 😅\n\nEscribe *MENU* para ver las opciones disponibles.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        6144,
+        1120
+      ],
+      "id": "faef7709-8b15-434e-bcf8-d2bc26e2ed85",
+      "name": "Send message69",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "Ahora por favor *envía la imagen del logo* 📸",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        4912,
+        816
+      ],
+      "id": "09163d4a-7e02-4586-9d98-e235cdb49fd3",
+      "name": "Send message70",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Cuál es el *nombre* que deseas bordar? ✍️\n\nEscríbelo exactamente como debe aparecer.",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5056,
+        864
+      ],
+      "id": "082a81cb-1b6a-4a62-af70-cf820d4fd225",
+      "name": "Send message71",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "¿Cuántas unidades de este producto necesitas?\n\nEscribe solo el número:",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5200,
+        912
+      ],
+      "id": "9d474845-bdce-47fb-9b1f-7fb94494147f",
+      "name": "Send message72",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "⚠️ Por favor escribe un número válido mayor a 0.\n¿Cuántas unidades necesitas?",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5360,
+        944
+      ],
+      "id": "759cedf2-d642-4e10-a3c6-4ae6ae439422",
+      "name": "Send message73",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "={{ \"✅ Producto agregado:\\n\\n\" + $json.resumenItem + \"\\n\\n¿Deseas agregar otro producto al pedido?\\n\\n1️⃣ Sí, agregar otro producto\\n2️⃣ No, finalizar pedido\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5552,
+        976
+      ],
+      "id": "581eb845-d4e0-4c90-9602-c145e7fd15dc",
+      "name": "Send message74",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "={{ \"📋 *RESUMEN DE TU PEDIDO:*\\n\\n\" + $json.resumen + \"\\n\\n¿Confirmas este pedido?\\n\\n1️⃣ ✅ Sí, confirmar\\n2️⃣ ❌ No, cancelar\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5696,
+        992
+      ],
+      "id": "34800ce7-514e-4e4e-a4a9-5c72ade14442",
+      "name": "Send message76",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "❌ Pedido cancelado.\n\nSi deseas intentarlo de nuevo o necesitas ayuda, escribe *MENU* en cualquier momento.\n\n¡Hasta pronto! 👋",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5824,
+        1040
+      ],
+      "id": "0b4f4edb-0ddb-4c3c-bea7-4a20fbef3ba6",
+      "name": "Send message77",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "={{ \"🎉 *¡Pedido confirmado!*\\n\\n\" + $json.pedido.resumenTexto + \"\\n\\n*Métodos de pago:*\\n💵 Efectivo\\n📱 Nequi\\n\\nRecuerda que el anticipo mínimo es del 50%.\\nNos pondremos en contacto contigo pronto.\\n\\n¡Gracias por confiar en LH Uniformes! 🙏\" }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        5968,
+        1072
+      ],
+      "id": "2a3a6c64-6e0d-423d-8052-8646aa314e4b",
+      "name": "Send message78",
+      "webhookId": "a56a8fc4-a3e8-424e-a94c-75a857ded900",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "573138090276",
+        "textBody": "={{ \"🔔 *NUEVO PEDIDO RECIBIDO*\\n\\n\" + $('Code in JavaScript').item.json.pedido.resumenTexto + \"\\n\\n💬 WhatsApp cliente: \" + $('Code in JavaScript').item.json.pedido.celular }}",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        6320,
+        1072
+      ],
+      "id": "7f3bc0af-5a0e-49ed-9a2e-c3fe9418a6d3",
+      "name": "Send message29",
+      "webhookId": "be4dfe08-c825-4f58-b933-e1e132906ded",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "mode": "id",
+          "value": "1_8wdTlRHQoZFTEfNH5RH8RPWgx5xNYcLGdIGPXVdfDk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Hoja 1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1_8wdTlRHQoZFTEfNH5RH8RPWgx5xNYcLGdIGPXVdfDk/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "telefono": "={{ $json.telefono }}",
+            "nombre": "={{ $json.nombre }}",
+            "uniforme": "={{ $json.uniforme }}",
+            "talla": "={{ $json.talla }}",
+            "genero": "={{ $json.genero }}",
+            "cantidad": "={{ $json.cantidad }}",
+            "estado": "Pendiente",
+            "fecha": "={{ $json.fecha }}",
+            "color": "={{ $json.color }}",
+            "camuflado": "={{ $json.camuflado }}",
+            "bordado": "={{ $json.bordado }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "telefono",
+              "displayName": "telefono",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "nombre",
+              "displayName": "nombre",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "uniforme",
+              "displayName": "uniforme",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "talla",
+              "displayName": "talla",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "genero",
+              "displayName": "genero",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "cantidad",
+              "displayName": "cantidad",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "color",
+              "displayName": "color",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "camuflado",
+              "displayName": "camuflado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "bordado",
+              "displayName": "bordado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            },
+            {
+              "id": "estado",
+              "displayName": "estado",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "fecha",
+              "displayName": "fecha",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ],
+          "attemptToConvertTypes": false,
+          "convertFieldsToString": false
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.7,
+      "position": [
+        6704,
+        1072
+      ],
+      "id": "d5b9e159-988a-4da8-ac2a-74c4b3b183ff",
+      "name": "Append row in sheet",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "W38X2EaE8X7rQPL2",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $('Code in JavaScript').item.json.telefono }}",
+        "messageType": "image",
+        "mediaLink": "https://i.imgur.com/Qqnb3RF.jpeg",
+        "additionalFields": {
+          "mediaCaption": "Escribe *menu* para volver al inicio"
+        }
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        2752,
+        -1280
+      ],
+      "id": "50db8f1f-9897-499e-999c-6d3a7957daf7",
+      "name": "Send message28",
+      "webhookId": "ab576691-7ede-4825-9561-22b59778acfd",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "const pedido = $('Code in JavaScript').item.json.pedido;\nconst fecha = pedido.fecha;\n\nreturn pedido.items.map(function(item, i) {\n  return {\n    json: {\n      telefono: pedido.celular,\n      nombre: pedido.nombre,\n      uniforme: item.categoriaLabel + ' ' + (item.subtipoLabel || ''),\n      talla: item.talla || 'Único',\n      genero: item.genero || '',\n      cantidad: item.cantidad,\n      color: item.color || '',\n      camuflado: item.camuflado !== undefined ? (item.camuflado ? 'Sí' : 'No') : '',\n      bordado: item.bordadoLabel || 'Sin bordado',\n      bordado_nombre: item.bordadoNombre || '',\n      precio_unitario: item.precio,\n      subtotal: item.subtotal,\n      valor_total: i === 0 ? pedido.valorTotal : '',\n      anticipo: i === 0 ? pedido.anticipo : '',\n      estado: 'Pendiente',\n      fecha: fecha\n    }\n  };\n});"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        6512,
+        1072
+      ],
+      "id": "4c66b67e-5fd0-453d-a07d-c4731e0a7e59",
+      "name": "Code in JavaScript1"
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "📏 *GUÍA DE TALLAS*\n\nManejamos las siguientes tallas:\n- 16 - XS - S - M - L - XL - XXL - XXXL\n\nSi tienes dudas sobre tu talla te recomendamos acercarte al local para tomar medidas personalizadas 📐\n\n📍 *Carrera 9 #8-66*\n\nPara volver al menú escribe *menu*",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        928,
+        -2432
+      ],
+      "id": "49b13e2f-f328-4b9e-b1f8-b07b2d82cff8",
+      "name": "Send message2",
+      "webhookId": "2415297b-15dd-470c-bbb2-d7ce5391a4eb",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "send",
+        "phoneNumberId": "1110619145457474",
+        "recipientPhoneNumber": "={{ $json.telefono }}",
+        "textBody": "📍 *INFORMACIÓN DEL LOCAL*\n\n🏪 *LH Uniformes*\n📌 Dirección: Carrera 9 #8-66\n\n🕐 *Horarios de atención:*\n- Lunes a Viernes: 8:00am - 12:00pm y 2:00pm - 6:00pm\n- Sábados: 8:00am - 12:00pm\n- Domingos: Cerrado ❌\n\n💳 *Métodos de pago:*\n- Efectivo 💵\n- Nequi 📱\n\n🚚 *Domicilios:* Sí realizamos envíos\n🧾 *Factura electrónica:* Disponible si la necesitas\n📌 *Anticipo:* 50% para iniciar la confección\n\nPara volver al menú escribe *menu*",
+        "additionalFields": {}
+      },
+      "type": "n8n-nodes-base.whatsApp",
+      "typeVersion": 1.1,
+      "position": [
+        1120,
+        -2272
+      ],
+      "id": "6810df3c-af81-4f4e-8b08-e1f09874d6bd",
+      "name": "Send message3",
+      "webhookId": "88446304-63b9-4129-a421-525ce19da807",
+      "credentials": {
+        "whatsAppApi": {
+          "id": "0e4s1v6NO1SWK73w",
+          "name": "WhatsApp account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "1",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    },
+                    "id": "f50308e6-fe01-4048-a86c-e9f23b8b29a9"
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "fd320b6f-a556-48e5-85c3-f8c1681a3dbe",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "2",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "38a37ad9-8288-4b15-a829-7bc3066cb6fe",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "3",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "e413561b-2146-449a-8cad-6dffbd7dbf55",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "4",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "5cd82c77-2133-4ded-b7b2-dd142d7037bb",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "5",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "978034b6-c0ac-4cbf-8377-932b54ee5be1",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "6",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 3
+                },
+                "conditions": [
+                  {
+                    "id": "9031e3f3-ab92-4d60-9c0d-5ed68094f381",
+                    "leftValue": "={{ $json.mensaje }}",
+                    "rightValue": "7",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "options": {
+          "fallbackOutput": "extra"
+        }
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.4,
+      "position": [
+        512,
+        -2352
+      ],
+      "id": "94b8d313-fceb-4cfd-b08f-064fda1a96f5",
+      "name": "Switch2"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "WhatsApp Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Switch2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message17",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Switch1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message11",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message47",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message48",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message49",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message50",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message51",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message52",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message53",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message54",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message55",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message56",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message57",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message58",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message59",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message60",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message61",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message62",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message63",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message64",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message65",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message66",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message67",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message68",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message70",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message71",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message72",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message73",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message74",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message76",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message77",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message78",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message69",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message37",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message39",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message40",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message41",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message42",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message43",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message44",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message14",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch1": {
+      "main": [
+        [
+          {
+            "node": "Send message15",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message16",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message8",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message9",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message10",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message12",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message7",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message13",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        []
+      ]
+    },
+    "Send message13": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch3": {
+      "main": [
+        [
+          {
+            "node": "Send message18",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message19",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message20",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message21",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message22",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message23",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message24",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message25",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message25": {
+      "main": [
+        []
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Code in JavaScript",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message26": {
+      "main": [
+        [
+          {
+            "node": "Send message27",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request1": {
+      "main": [
+        [
+          {
+            "node": "Send message26",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Send message38",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Get row(s) in sheet": {
+      "main": [
+        [
+          {
+            "node": "If2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If2": {
+      "main": [
+        [
+          {
+            "node": "Send message45",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message46",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message44": {
+      "main": [
+        [
+          {
+            "node": "Get row(s) in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message15": {
+      "main": [
+        []
+      ]
+    },
+    "Send message39": {
+      "main": [
+        []
+      ]
+    },
+    "Send message78": {
+      "main": [
+        [
+          {
+            "node": "Send message29",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message29": {
+      "main": [
+        [
+          {
+            "node": "Code in JavaScript1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Send message": {
+      "main": [
+        [
+          {
+            "node": "Send message28",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code in JavaScript1": {
+      "main": [
+        [
+          {
+            "node": "Append row in sheet",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch2": {
+      "main": [
+        [],
+        [],
+        [
+          {
+            "node": "Send message2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Send message3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [],
+        [],
+        [
+          {
+            "node": "Send message4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": true,
+  "settings": {
+    "executionOrder": "v1",
+    "binaryMode": "separate"
+  },
+  "versionId": "4499bbaf-e066-4e8e-b80a-8133d75437f3",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "d433bc7d560a21ac97b533e339ff632bb15e232463a2ffc5347ce7cc3540efc6"
+  },
+  "id": "28Vl4o2O5hnFztwU",
+  "tags": []
+}
